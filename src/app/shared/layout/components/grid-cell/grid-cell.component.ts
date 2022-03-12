@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-grid-cell',
   templateUrl: './grid-cell.component.html',
-  styleUrls: ['./grid-cell.component.scss']
+  styleUrls: ['./grid-cell.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GridCellComponent implements OnInit {
 
