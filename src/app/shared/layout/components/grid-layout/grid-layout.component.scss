@@ -5,6 +5,5 @@
 }
 
 :host ::ng-deep app-grid-cell {
-  display: block;
-  height: 100%;
+  overflow-x: auto;;
 }

@@ -4,7 +4,9 @@
         [colSpans]="cell.colSpans"
         [rowSpan]="cell.rowSpan">
       <ng-container *ngIf="cell.component; else noGridCellComponentDefined">
-        <ng-container [ngComponentOutlet]="cell.component"></ng-container>
+        <div>
+          <ng-container [ngComponentOutlet]="cell.component"></ng-container>
+        </div>
       </ng-container>
     </app-grid-cell>
   </ng-container>

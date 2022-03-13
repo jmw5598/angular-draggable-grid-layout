@@ -18,7 +18,7 @@ export class GridCellComponent implements OnInit {
   // Maybe remove completely.
 
   @Input()
-  public rowSpan: GridCellRowSpan = 1;
+  public rowSpan: GridCellRowSpan | null = null;
 
   constructor(
     private el: ElementRef
@@ -36,6 +36,11 @@ export class GridCellComponent implements OnInit {
       })?.filter(c => c.length) || [];
 
     this.el.nativeElement.classList.add(...colClasses);
-    this.el.nativeElement.style.gridRow = `span ${this.rowSpan || 1}`;
+
+    if (this.rowSpan) {
+      this.el.nativeElement.style.gridRow = `auto`;
+    } else {
+      this.el.nativeElement.style.gridRow = `span ${this.rowSpan || 1}`;
+    }
   }
 }
