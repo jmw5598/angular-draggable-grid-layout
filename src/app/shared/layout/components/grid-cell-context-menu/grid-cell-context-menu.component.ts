@@ -7,11 +7,6 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GridCellContextMenuComponent implements OnInit {
-  @Input()
-  public colSpan: number = 1;
-
-  @Input()
-  public rowSpan: number = 1;
 
   constructor() { }
 

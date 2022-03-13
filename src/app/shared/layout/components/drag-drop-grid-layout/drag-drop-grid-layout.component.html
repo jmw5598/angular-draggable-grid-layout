@@ -1,0 +1,19 @@
+<app-grid-layout *ngIf="layoutDefinition; else noGridLayoutDefinitionDefined">
+  <ng-container *ngFor="let cell of layoutDefinition?.cells">
+    <app-grid-cell 
+        [colSpan]="cell.colSpan"
+        [rowSpan]="cell.rowSpan">
+      <ng-container *ngIf="cell.component; else noGridCellComponentDefined">
+        <ng-container [ngComponentOutlet]="cell.component"></ng-container>
+      </ng-container>
+    </app-grid-cell>
+  </ng-container>
+</app-grid-layout>
+
+<ng-template #noGridLayoutDefinitionDefined>
+  <div>No grid layout definition defined!</div>
+</ng-template>
+
+<ng-template #noGridCellComponentDefined>
+  <div style=" display: block; background: green">No grid cell component defined!</div>
+</ng-template>
