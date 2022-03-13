@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+// XSmall Screens
+@media (max-width: 575.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xs-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+// Small Screens
+@media (max-width: 767.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-sm-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+// Medium Screens
+@media (max-width: 991.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-md-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+
+// Large Screens
+@media (max-width: 1199.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-lg-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+// XLarge Screens
+@media (max-width: 1399.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xl-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+// Default
+// @media (max-width: 1399.99px) {
+//   @for $i from 1 through 12 {
+//     .grid-cell-#{$i} {
+//       grid-column: span #{$i};
+//     }
+//   }
+// }

@@ -12,7 +12,7 @@ export class AppComponent {
     cells: [
       {
         component: GridCellExampleComponent,
-        colSpan: 6,
+        colSpan: 12,
         rowSpan: 3
       },
       {
