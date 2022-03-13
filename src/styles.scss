@@ -2,54 +2,59 @@
 
 
 
-// XSmall Screens
-@media (max-width: 575.98px) {
-  @for $i from 1 through 12 {
-    .grid-cell-xs-#{$i} {
-      grid-column: span #{$i};
-    }
-  }
-}
-
 // Small Screens
-@media (max-width: 767.98px) {
+@media only screen and (min-width: 576px) {
   @for $i from 1 through 12 {
     .grid-cell-sm-#{$i} {
       grid-column: span #{$i};
+      background: red;
     }
   }
 }
 
 // Medium Screens
-@media (max-width: 991.98px) {
+@media only screen and (min-width: 768px) {
   @for $i from 1 through 12 {
     .grid-cell-md-#{$i} {
       grid-column: span #{$i};
+      background: blue;
     }
   }
 }
 
-
 // Large Screens
-@media (max-width: 1199.98px) {
+@media only screen and (min-width: 992px) {
   @for $i from 1 through 12 {
     .grid-cell-lg-#{$i} {
       grid-column: span #{$i};
+      background: green;
     }
   }
 }
 
+
 // XLarge Screens
-@media (max-width: 1399.98px) {
+@media only screen and (min-width: 1200px) {
   @for $i from 1 through 12 {
     .grid-cell-xl-#{$i} {
       grid-column: span #{$i};
+      background: yellow;
+    }
+  }
+}
+
+// XXLarge Screens
+@media only screen and (min-width: 1400px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xxl-#{$i} {
+      grid-column: span #{$i};
+      background: orange;
     }
   }
 }
 
 // Default
-// @media (max-width: 1399.99px) {
+// @media only screen and (min-width: 1399.99px) {
 //   @for $i from 1 through 12 {
 //     .grid-cell-#{$i} {
 //       grid-column: span #{$i};

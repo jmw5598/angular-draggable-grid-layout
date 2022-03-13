@@ -12,23 +12,23 @@ export class AppComponent {
     cells: [
       {
         component: GridCellExampleComponent,
-        colSpan: 12,
-        rowSpan: 3
+        colSpans: [12, 12, 12, 12, 6, 6],
+        rowSpan: 6
       },
       {
         component: null,
-        colSpan: 3,
-        rowSpan: 1
+        colSpans: [12, 12, 12, 12, 3, 2],
+        rowSpan: 2
       },
       {
         component: null,
-        colSpan: 3,
-        rowSpan: 1
+        colSpans: [12, 12, 12, 12, 3, 2],
+        rowSpan: 2
       },
       {
         component: null,
-        colSpan: 3,
-        rowSpan: 1
+        colSpans: [12, 12, 12, 12, 12 , 2],
+        rowSpan: 2
       },
     ]
   }

@@ -9,7 +9,7 @@ import { GridCellColSpan, GridCellRowSpan } from '../../models/grid-cell-spans.t
 })
 export class GridCellComponent implements OnInit {
   private _colSpancClassPrefixes: string[] = 
-    ['grid-cell', 'grid-cell-xs', 'grid-cell-sm', 'grid-cell-md', 'grid-cell-lg', 'grid-cell-xl'];
+    ['grid-cell-xs', 'grid-cell-sm', 'grid-cell-md', 'grid-cell-lg', 'grid-cell-xl', 'grid-cell-xxl'];
 
   @Input()
   public colSpans: GridCellColSpan[] = [3];
@@ -36,7 +36,6 @@ export class GridCellComponent implements OnInit {
       })?.filter(c => c.length) || [];
 
     this.el.nativeElement.classList.add(...colClasses);
-    // this.el.nativeElement.style.gridColumn = `span ${this.colSpan || 3}`;
     this.el.nativeElement.style.gridRow = `span ${this.rowSpan || 1}`;
   }
 }
