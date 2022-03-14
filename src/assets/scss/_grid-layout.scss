@@ -1,0 +1,64 @@
+.grid-row-auto {
+  grid-row: auto;
+}
+
+// XSmall Screens
+@media only screen and (max-width: 575.98px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xs-#{$i} {
+      grid-column: span #{$i};
+      background: pink;
+    }
+  }
+}
+
+// Small Screens
+@media only screen and (min-width: 576px) {
+  @for $i from 1 through 12 {
+    .grid-cell-sm-#{$i} {
+      grid-column: span #{$i};
+      background: red;
+    }
+  }
+}
+
+// Medium Screens
+@media only screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .grid-cell-md-#{$i} {
+      grid-column: span #{$i};
+      background: blue;
+    }
+  }
+}
+
+// Large Screens
+@media only screen and (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .grid-cell-lg-#{$i} {
+      grid-column: span #{$i};
+      background: green;
+    }
+  }
+}
+
+
+// XLarge Screens
+@media only screen and (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xl-#{$i} {
+      grid-column: span #{$i};
+      background: yellow;
+    }
+  }
+}
+
+// XXLarge Screens
+@media only screen and (min-width: 1400px) {
+  @for $i from 1 through 12 {
+    .grid-cell-xxl-#{$i} {
+      grid-column: span #{$i};
+      background: orange;
+    }
+  }
+}
