@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GridCellExampleComponent } from './components/grid-cell-example/grid-cell-example.component';
-import { GridLayoutDefinition, GridCellDefinition } from './shared/layout';
+import { GridLayoutDefinition, GridCellDefinition, DragDropGridLayoutService } from './shared/layout';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public layoutDefinition: GridLayoutDefinition = {
     cells: [
       {
@@ -31,5 +31,13 @@ export class AppComponent {
         rowSpan: 2
       },
     ]
+  }
+
+  constructor(
+    private _dragDropGridLayoutService: DragDropGridLayoutService
+  ) { }
+
+  ngOnInit(): void {
+    this._dragDropGridLayoutService.setLayout(this.layoutDefinition);
   }
 }

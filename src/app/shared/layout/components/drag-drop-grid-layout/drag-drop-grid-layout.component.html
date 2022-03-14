@@ -1,6 +1,11 @@
-<app-grid-layout *ngIf="layoutDefinition; else noGridLayoutDefinitionDefined">
+<app-grid-layout 
+    *ngIf="layoutDefinition$ | async as layoutDefinition; else noGridLayoutDefinitionDefined" 
+    cdkDropList
+    [cdkDropListData]="layoutDefinition.cells"
+    (cdkDropListDropped)="onDropCell($event)">
   <ng-container *ngFor="let cell of layoutDefinition?.cells">
     <app-grid-cell 
+        cdkDrag
         [colSpans]="cell.colSpans"
         [rowSpan]="cell.rowSpan">
       <ng-container *ngIf="cell.component; else noGridCellComponentDefined">
